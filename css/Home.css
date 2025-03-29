@@ -5,6 +5,9 @@
   padding: 0;
 }
 /* header */
+.header-ctn {
+  position: fixed;
+}
 /* head top */
 .head__top {
   background-color: #2fa1c5;
@@ -68,4 +71,26 @@
 .btn-su:hover {
   background: linear-gradient(to right, #0f172a, #1e3a8a);
   transform: scale(1.05);
+}
+/* footer */
+.footer {
+  color: #fff;
+  padding: 10px 50px;
+}
+.bg-footer {
+  background-color: #2fa1c5;
+}
+.footer li {
+  list-style-type: none;
+}
+footer h5 {
+  font-weight: bold;
+}
+.footer i {
+  font-size: 25px;
+  width: 35px;
+}
+.footer p,
+span {
+  color: #000;
 }

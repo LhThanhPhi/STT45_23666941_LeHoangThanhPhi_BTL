@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website giới thiệu, bán thức ăn chó mèo trực tuyến</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/Home.css" />
   </head>
   <body>
     <!-- header -->
-    <div class="container-fluid">
+    <div class="container-fluid header-ctn">
       <header class="head">
         <div class="row head__top align-items-center justify-content-between">
           <div class="col-5 d-flex justify-content-center align-items-center">
@@ -19,31 +20,16 @@
           <div class="col-7 d-flex justify-content-center align-items-center">
             <form action="#">
               <div class="input-group">
-                <input
-                  type="search"
-                  name="search"
-                  id="search"
-                  placeholder="nhập từ khóa tìm kiếm..."
-                />
+                <input type="search" name="search" id="search" placeholder="nhập từ khóa tìm kiếm..." />
                 <button type="button" class="btn btn-search">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    width="18px"
-                  >
-                    <path
-                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                    />
-                  </svg>
+                  <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
             </form>
           </div>
         </div>
         <div class="row head__bottom align-items-center">
-          <div
-            class="col-5 d-flex justify-content-center align-items-center box-btn"
-          >
+          <div class="col-5 d-flex justify-content-center align-items-center box-btn">
             <button type="button" class="btn btn-si">Đăng Nhập</button>
             <button type="button" class="btn btn-su">Đăng Ký</button>
           </div>
@@ -73,15 +59,68 @@
     </div>
 
     <!-- main -->
-    <div class="container">
+    <div class="container" style="height: 1000px">
       <main class="main"></main>
     </div>
 
     <!-- footer -->
-    <div class="container-fluid">
+    <div class="container-fluid bg-footer">
       <footer class="footer">
         <div class="row">
-          
+          <div class="col-7">
+            <h5>Shop PetGourmet</h5>
+            <p>
+              PetGourmet là cửa hàng chuyên cung cấp thực phẩm cao cấp cho thú cưng, từ thức ăn dinh dưỡng đến các món ăn vặt hấp dẫn. Chúng tôi cam
+              kết mang đến sản phẩm chất lượng, an toàn và phù hợp với mọi nhu cầu của thú cưng.
+            </p>
+
+            <p>
+              Bên cạnh đó, PetGourmet luôn cập nhật những xu hướng mới nhất trong dinh dưỡng thú cưng, đảm bảo mỗi bữa ăn không chỉ ngon miệng mà còn
+              đầy đủ dưỡng chất. Hãy ghé thăm PetGourmet để mang đến cho bé cưng của bạn sự chăm sóc tốt nhất!
+            </p>
+          </div>
+          <div class="col-3">
+            <h5>Liên Hệ</h5>
+            <ul>
+              <li>
+                <span><i class="fa-solid fa-location-dot" style="color: #30c606"></i></span>
+                <span>Địa chỉ: 1 Lê Lai, Quận 1, TP HCM</span>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-phone" style="color: #74c0fc"></i></span>
+                <span>0987654321</span>
+              </li>
+              <li>
+                <span> <i class="fa-solid fa-envelope" style="color: #1900ff"></i></span>
+                <span>cskhPetGourmet@gmail.com</span>
+              </li>
+              <li>
+                <span> <i class="fa-solid fa-globe" style="color: #075ef2"></i></span>
+                <span>http://xxxxxxxx</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <h5>Tương tác với Shop</h5>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <span>Facebook</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram" style="color: #e64747"></i></a>
+                <span>Instagram</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-tiktok" style="color: #000000"></i></a>
+                <span>Tiktok</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube" style="color: #ff0000"></i></a>
+                <span>Youtube</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>
