@@ -107,6 +107,28 @@ main {
   border-radius: 5px;
   overflow: hidden;
 }
+.sec-img .father-si {
+  position: relative;
+}
+.shop-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.sec-img .shop-intro h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 /* section choose */
 .sec-choose {
   margin-top: 10px;
@@ -131,7 +153,7 @@ main {
   transform: scale(1.1);
 }
 /* section items */
-.card-text {
+.sec-item .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
   -webkit-box-orient: vertical;
@@ -176,4 +198,36 @@ main {
   transform: translateY(-5px);
   transform: scale(1.05);
   transition: 0.3s;
+}
+/*  section why choose*/
+.sec-why-choose {
+  margin: 10px 0;
+}
+.sec-why-choose .card {
+  border: none;
+}
+.sec-why-choose .img-why-choose {
+  width: 50%;
+  margin: 0 auto;
+  transition: transform 0.8s ease-in-out;
+}
+.sec-why-choose .img-why-choose:hover {
+  transform: rotateY(360deg); /* xoay 360 độ theo trục yy */
+}
+.sec-why-choose .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.sec-why-choose .desc-wc {
+  text-align: center;
+}
+.sec-why-choose .card-title,
+.h2-wc {
+  color: #0167ab;
+  font-weight: bold;
+}
+.sec-why-choose .card-text {
+  color: #818181;
 }
