@@ -6,7 +6,10 @@
 }
 /* header */
 .header-ctn {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
 /* head top */
 .head__top {
@@ -64,10 +67,7 @@
   border: none;
 }
 
-.btn-si:hover {
-  background: linear-gradient(to right, #0f172a, #1e3a8a);
-  transform: scale(1.05);
-}
+.btn-si:hover,
 .btn-su:hover {
   background: linear-gradient(to right, #0f172a, #1e3a8a);
   transform: scale(1.05);
@@ -93,4 +93,87 @@ footer h5 {
 .footer p,
 span {
   color: #000;
+}
+/* main */
+main {
+  margin-top: 10px;
+}
+/* section img */
+.img-food1,
+.img-food2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* section choose */
+.sec-choose {
+  margin-top: 10px;
+}
+.desc-choose {
+  font-size: 1.5rem;
+}
+.desc-title {
+  color: #2fa1c5;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.img-cat,
+.img-dog {
+  margin: 10px 0;
+  position: relative;
+}
+.img-cat:hover,
+.img-dog:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+/* section items */
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.bg-item {
+  margin: 20px 0;
+  padding: 50px 200px;
+  background-image: linear-gradient(to bottom, #2fa1c5, #a3eeee);
+}
+.sec-item {
+  row-gap: 20px;
+}
+.sec-item .desc-sp {
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif, monospace;
+}
+.sec-item .btn-xem {
+  background-color: #0167ab;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+.sec-item .money {
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sec-item .card {
+  padding: 5px;
+}
+.sec-item .desc-food {
+  text-align: center;
+  color: #11386f;
+}
+.sec-item .img-card-hv:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  transition: 0.3s;
 }
