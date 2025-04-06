@@ -1,0 +1,90 @@
+.main {
+  margin: 10px 0;
+}
+.store .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.store {
+  row-gap: 20px;
+}
+.store .title-dog,
+.title-cat {
+  font-weight: 700;
+  color: #0167ab;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.store .title-cat {
+  margin: 25px 0;
+}
+.store .money {
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+}
+.store .card {
+  padding: 5px;
+  background-color: #faf6ed;
+  height: 100%;
+}
+.store .desc-food {
+  text-align: center;
+  color: #11386f;
+}
+.store .img-card-hv:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.store .box-search {
+  margin-top: 55px;
+  width: 100%;
+  position: sticky;
+  top: 120px;
+  z-index: 10;
+}
+.store .box-search .head-tt {
+  background-color: #09356f;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.store .box-search .list-choice {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+}
+.store .box-search .foot {
+  margin-right: 10px;
+}
+.btn-dog-js,
+.btn-cat-js {
+  background-color: #0167ab;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 15px;
+  margin: 10px 15px;
+}
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12,
+.item17,
+.item18,
+.item19,
+.item20,
+.item21,
+.item22,
+.item23,
+.item24 {
+  display: none;
+}
