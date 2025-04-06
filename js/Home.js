@@ -118,5 +118,92 @@ function clearForm(modalId) {
   }
 }
 
-document.querySelector("#su .btn-f-sign").addEventListener("click", clearSignUpForm);
-document.querySelector("#si .btn-f-sign").addEventListener("click", clearSignInForm);
+// check su lưu vào localstorage sau su
+document.querySelector("#su .btn-f-sign").addEventListener("click", function () {
+  checkTenSU();
+  checkHoSU();
+  checkEmailSu();
+  checkPassWordSu();
+
+  let isValid =
+    document.querySelector(".sp-ten-su").style.color === "green" &&
+    document.querySelector(".sp-ho-su").style.color === "green" &&
+    document.querySelector(".sp-email-su").style.color === "green" &&
+    document.querySelector(".sp-pass-su").style.color === "green";
+
+  if (!isValid) {
+    alert("Vui lòng nhập đúng đầy đủ thông tin!");
+    return;
+  }
+
+  // Lấy dữ liệu từ input
+  let ten = document.querySelector(".ten-su").value;
+  let ho = document.querySelector(".ho-su").value;
+  let email = document.querySelector(".email-su").value;
+  let password = document.querySelector(".pass-su").value;
+
+  // Lấy danh sách người dùng từ localStorage
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Kiểm tra email đã tồn tại chưa
+  let isExist = users.some((user) => user.email === email);
+
+  if (isExist) {
+    let spEmail = document.querySelector(".sp-email-su");
+    spEmail.style.color = "red";
+    spEmail.innerHTML = "Email này đã được đăng ký. Vui lòng dùng email khác.";
+    return;
+  }
+
+  // Thêm người dùng mới
+  let newUser = {
+    ho: ho,
+    ten: ten,
+    email: email,
+    password: password,
+  };
+  users.push(newUser);
+
+  // Lưu lại vào localStorage
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Đăng ký thành công!");
+  clearSignUpForm();
+});
+
+// check danh sách trong localstorage
+// console.log(localStorage.getItem("users"));
+// clear kho localstorage
+// localStorage.clear();
+
+// check si từ localstorage
+document.querySelector("#si .btn-f-sign").addEventListener("click", function () {
+  checkEmailSi();
+  checkPassWordSi();
+
+  let isValid = document.querySelector(".sp-email-si").style.color === "green" && document.querySelector(".sp-pass-si").style.color === "green";
+
+  if (!isValid) {
+    alert("Vui lòng nhập đúng thông tin đăng nhập!");
+    return;
+  }
+
+  let email = document.querySelector(".email-si").value;
+  let password = document.querySelector(".pass-si").value;
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  let matchedUser = users.find((user) => user.email === email && user.password === password);
+
+  if (matchedUser) {
+    alert(`Đăng nhập thành công! Xin chào ${matchedUser.ho} ${matchedUser.ten}`);
+    clearSignInForm();
+  } else {
+    let spEmail = document.querySelector(".sp-email-si");
+    let spPass = document.querySelector(".sp-pass-si");
+    spEmail.style.color = "red";
+    spPass.style.color = "red";
+    spEmail.innerHTML = "Email hoặc mật khẩu không đúng";
+    spPass.innerHTML = "Email hoặc mật khẩu không đúng";
+  }
+});
