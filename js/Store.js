@@ -27,7 +27,7 @@ function suKienClickbtn() {
     btncat.style.display = "none";
   }
 
-  function handleShow(x, n) {   
+  function handleShow(x, n) {
     for (let i = x; i <= n; i++) {
       let item = document.querySelector(`.item${i}`);
       if (item) {
