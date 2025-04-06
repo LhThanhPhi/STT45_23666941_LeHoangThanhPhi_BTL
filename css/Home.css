@@ -72,6 +72,9 @@
   background: linear-gradient(to right, #0f172a, #1e3a8a);
   transform: scale(1.05);
 }
+.btn.btn-si {
+  margin-left: -20px;
+}
 /* footer */
 .footer {
   color: #fff;
