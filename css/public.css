@@ -133,4 +133,69 @@ span {
 .form span {
   margin-left: 2px;
 }
-/*  */
+/* modal product */
+#product .btn-pro {
+  border: none;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 2px 4px;
+}
+#product .btn-close-pro {
+  background-color: #0167ab;
+  color: #fff;
+}
+#product .pro-top {
+  display: flex;
+  gap: 20px;
+}
+#product .pro-top h5 {
+  font-size: 18px;
+}
+#product .pro-top .price {
+  display: inline-block;
+  color: red;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#product .pro-top .mota,
+.chitiet {
+  margin-bottom: 15px;
+}
+#product .thongtin li {
+  list-style-type: none;
+  margin: 10px 0 0 10px;
+}
+#product .pro-bot .count {
+  text-align: right;
+}
+#product .pro-bot .count .btn-cong,
+.btn-tru {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#product .pro-bot .count .space {
+  width: 440px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+#product .pro-bot .add {
+  text-align: right;
+  margin-top: 10px;
+}
+#product .pro-bot .btn-giohang {
+  width: 252px;
+  background-color: #61b3f2;
+  color: #fff;
+}
+#product .pro-bot .btn-giohang .shopping {
+  margin-right: 10px;
+}
+#product .pro-bot .btn-muangay {
+  width: 252px;
+  background-color: #f4a109;
+  color: #fff;
+}
