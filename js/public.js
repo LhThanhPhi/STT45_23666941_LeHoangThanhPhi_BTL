@@ -1,4 +1,4 @@
-// regex su :sign up
+// regex su : sign up
 function checkTenSU() {
   let checkTen = /^[\p{Lu}][\p{Ll}]*(?: [\p{Lu}][\p{Ll}]*)*$/u;
   let ten = document.querySelector(".ten-su").value;
@@ -63,8 +63,7 @@ function checkPassWordSu() {
 let kiemTraPassSu = document.querySelector(".pass-su");
 kiemTraPassSu.addEventListener("blur", checkPassWordSu);
 
-//regex si sign in
-
+// regex si sign in
 function checkEmailSi() {
   let checkEmail2 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let email2 = document.querySelector(".email-si").value;
@@ -171,11 +170,6 @@ document.querySelector("#su .btn-f-sign").addEventListener("click", function () 
   clearSignUpForm();
 });
 
-// check danh sách trong localstorage
-// console.log(localStorage.getItem("users"));
-// clear kho localstorage
-// localStorage.clear();
-
 // check si từ localstorage
 document.querySelector("#si .btn-f-sign").addEventListener("click", function () {
   checkEmailSi();
@@ -207,6 +201,7 @@ document.querySelector("#si .btn-f-sign").addEventListener("click", function () 
     spPass.innerHTML = "Email hoặc mật khẩu không đúng";
   }
 });
+
 // phần đổi text của product modal
 document.querySelectorAll(".card").forEach(function (card) {
   card.addEventListener("click", function () {
@@ -238,8 +233,14 @@ document.querySelectorAll(".card").forEach(function (card) {
 
     // Reset lại số lượng về 1 nếu muốn
     document.querySelector(".space").value = 1;
+
+    // Gán lại cho nút thêm vào giỏ
+    document.querySelector(".btn-giohang").dataset.img = img;
+    document.querySelector(".btn-giohang").dataset.title = title;
+    document.querySelector(".btn-giohang").dataset.price = price;
   });
 });
+
 // sự kiện +-
 let cong = document.querySelector(".btn-cong");
 let tru = document.querySelector(".btn-tru");
@@ -254,4 +255,36 @@ tru.addEventListener("click", function () {
   }
 });
 
-// kết thúc phần chung
+//Thêm Vào Giỏ Hàng
+document.querySelector(".btn-giohang").addEventListener("click", function () {
+  const img = this.dataset.img;
+  const title = this.dataset.title;
+  const price = this.dataset.price;
+  const quantity = parseInt(document.getElementById("sp").value);
+
+  // Tính tổng tiền (chuyển giá về dạng số)
+  const priceNumber = parseInt(price.replace(/\D/g, "")); // bỏ dấu . và đ
+  const total = priceNumber * quantity;
+
+  // Tạo object sản phẩm
+  const item = {
+    img,
+    title,
+    price,
+    quantity,
+    total,
+  };
+
+  // Lấy giỏ hàng hiện tại từ localStorage
+  const food = JSON.parse(localStorage.getItem("food")) || [];
+
+  // Thêm sản phẩm vào giỏ
+  food.push(item);
+
+  // Lưu lại vào localStorage
+  localStorage.setItem("food", JSON.stringify(food));
+
+  // alert("Thêm Vào Giỏ Hàng Thành Công");
+  // Chuyển sang trang giỏ hàng
+  window.location.href = "../html/Shopping.html"; // thay đổi đường dẫn nếu khác
+});
