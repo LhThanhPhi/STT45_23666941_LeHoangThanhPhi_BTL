@@ -61,7 +61,58 @@
 
     <!-- main -->
     <main class="main">
-      <div class="container"></div>
+      <div class="container">
+        <section class="pay row">
+          <div class="col-12">
+            <h2>Thanh Toán Đơn Hàng</h2>
+          </div>
+          <div class="col-12">
+            <label for="address">Địa Chỉ Giao</label>
+            <input type="text" name="address" id="address" />
+            <span class="check-add-pay"></span>
+          </div>
+          <div class="col-12">
+            <label for="tel-cus">Số Điện Thọai</label>
+            <input type="tel" name="tel-cus" id="tel-cus" />
+            <span class="check-tel-pay"></span>
+          </div>
+          <div class="col-12 item-product mt-4">
+            <!-- Các sản phẩm sẽ hiện ở đây -->
+          </div>
+          <div class="col-12 mt-3">
+            <h5 class="total-amount">Tổng tiền: 0đ</h5>
+          </div>
+          <div class="col-12">
+            <h3>Phương Thức Thanh Toán</h3>
+            <div class="row">
+              <div class="col-6">
+                <input type="radio" name="pttt" id="kgh" class="tt-of" />
+                <label for="kgh" class="tt-off">Khi Giao Hàng</label>
+                <div class="hidden-pay1">
+                  <img src="../img/payaf.png" alt="hp1" class="imghidden-pay1" />
+                </div>
+              </div>
+              <div class="col-6">
+                <input type="radio" name="pttt" id="onl" class="tt-onl" />
+                <label for="onl" class="tt-onl">Thanh Toán Online</label>
+
+                <select name="pay-online" id="pay-online">
+                  <option value="Google Pay">Google Pay</option>
+                  <option value="Momo">Momo</option>
+                  <option value="Ngân Hàng">Ngân Hàng</option>
+                </select>
+
+                <div class="hidden-pay2">
+                  <img src="../img/ggpay.webp" alt="hp2" class="imghidden-pay2" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-pay">Thanh Toán</button>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- footer -->

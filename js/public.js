@@ -255,18 +255,17 @@ tru.addEventListener("click", function () {
   }
 });
 
-//Thêm Vào Giỏ Hàng
+//Thêm Vào Giỏ Hàng của nút thêm vào giỏ hàng
 document.querySelector(".btn-giohang").addEventListener("click", function () {
-  const img = this.dataset.img;
-  const title = this.dataset.title;
-  const price = this.dataset.price;
+  const img = document.querySelector(".pro-img").getAttribute("src");
+  const title = document.querySelector(".tieude").innerText;
+  const price = document.querySelector(".price").innerText;
   const quantity = parseInt(document.getElementById("sp").value);
 
   // Tính tổng tiền (chuyển giá về dạng số)
   const priceNumber = parseInt(price.replace(/\D/g, "")); // bỏ dấu . và đ
   const total = priceNumber * quantity;
 
-  // Tạo object sản phẩm
   const item = {
     img,
     title,
@@ -285,6 +284,35 @@ document.querySelector(".btn-giohang").addEventListener("click", function () {
   localStorage.setItem("food", JSON.stringify(food));
 
   // alert("Thêm Vào Giỏ Hàng Thành Công");
-  // Chuyển sang trang giỏ hàng
-  window.location.href = "../html/Shopping.html"; // thay đổi đường dẫn nếu khác
+  window.location.href = "../html/Shopping.html";
+});
+
+//thêm Vào Giỏ Hàng của nút mua ngay
+document.querySelector(".btn-muangay").addEventListener("click", function () {
+  const img = document.querySelector(".pro-img").getAttribute("src");
+  const title = document.querySelector(".tieude").innerText;
+  const price = document.querySelector(".price").innerText;
+  const quantity = parseInt(document.getElementById("sp").value);
+
+  // Tính tổng tiền (chuyển giá về dạng số)
+  const priceNumber = parseInt(price.replace(/\D/g, "")); // bỏ dấu . và đ
+  const total = priceNumber * quantity;
+
+  const item = {
+    img,
+    title,
+    price,
+    quantity,
+    total,
+  };
+
+  // Lấy giỏ hàng hiện tại từ localStorage
+  const food = JSON.parse(localStorage.getItem("food")) || [];
+
+  // Thêm sản phẩm vào giỏ
+  food.push(item);
+
+  // Lưu lại vào localStorage
+  localStorage.setItem("food", JSON.stringify(food));
+  window.location.href = "../html/Pay.html"; // Cập nhật đường dẫn đúng nếu khác
 });

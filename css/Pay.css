@@ -1,0 +1,61 @@
+.pay {
+  padding: 30px;
+  border-radius: 16px;
+  color: #1c3d5a;
+}
+.pay h2 {
+  text-align: center;
+  color: #0077b6;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.pay label {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #1c3d5a;
+}
+.pay input[type="text"],
+.pay input[type="tel"],
+.pay select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #cce3dc;
+  margin-top: 6px;
+  font-size: 15px;
+}
+.pay h3 {
+  margin-top: 30px;
+  color: #0077b6;
+  font-size: 22px;
+}
+.imghidden-pay1,
+.imghidden-pay2 {
+  display: none;
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+#pay-online {
+  display: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #f1f9ff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+.pay .btn-pay {
+  width: 150px;
+  margin-top: 30px;
+  background-color: #f74a4a;
+  color: #fff;
+  border-radius: 10px;
+}
+.pay .btn-pay:hover {
+  background-color: #ff8c00;
+}
