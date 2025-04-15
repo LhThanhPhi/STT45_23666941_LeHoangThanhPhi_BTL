@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pay</title>
+    <title>Website giới thiệu, bán thức ăn chó mèo trực tuyến</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/public.css" />
-    <link rel="stylesheet" href="../css/Pay.css" />
+    <link rel="stylesheet" href="../css/History.css" />
   </head>
   <body>
     <!-- header -->
@@ -62,56 +62,23 @@
     <!-- main -->
     <main class="main">
       <div class="container">
-        <section class="pay row">
-          <div class="col-12">
-            <h2>Thanh Toán Đơn Hàng</h2>
-          </div>
-          <div class="col-12">
-            <label for="address">Địa Chỉ Giao</label>
-            <input type="text" name="address" id="address" />
-            <span class="check-add-pay"></span>
-          </div>
-          <div class="col-12">
-            <label for="tel-cus">Số Điện Thọai</label>
-            <input type="tel" name="tel-cus" id="tel-cus" />
-            <span class="check-tel-pay"></span>
-          </div>
-          <div class="col-12 item-product mt-4">
-            <!-- Các sản phẩm sẽ hiện ở đây -->
-          </div>
-          <div class="col-12 mt-3">
-            <h5 class="total-amount">Tổng tiền: 0đ</h5>
-          </div>
-          <div class="col-12">
-            <h3>Phương Thức Thanh Toán</h3>
-            <div class="row">
-              <div class="col-6">
-                <input type="radio" name="pttt" id="kgh" class="tt-of" />
-                <label for="kgh" class="tt-off">Khi Giao Hàng</label>
-                <div class="hidden-pay1">
-                  <img src="../img/payaf.png" alt="hp1" class="imghidden-pay1" />
-                </div>
-              </div>
-              <div class="col-6">
-                <input type="radio" name="pttt" id="onl" class="tt-onl" />
-                <label for="onl" class="tt-onl">Thanh Toán Online</label>
-
-                <select name="pay-online" id="pay-online">
-                  <option value="Google Pay">Google Pay</option>
-                  <option value="Momo">Momo</option>
-                  <option value="Ngân Hàng">Ngân Hàng</option>
-                </select>
-
-                <div class="hidden-pay2">
-                  <img src="../img/ggpay.webp" alt="hp2" class="imghidden-pay2" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="button" class="btn btn-pay">Thanh Toán</button>
-            <button type="button" class="btn btn-hist" onclick="window.location.href='../html/History.html'">Lịch Sử Giao Dịch</button>
-          </div>
+        <section class="row hist">
+          <h2 class="hist-tt">Lịch Sử Đặt Đơn Hàng</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Stt</td>
+                <td>Ngày Đặt Đơn</td>
+                <td>Tổng Tiền Đơn</td>
+                <td>Thanh Toán</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-back" onclick="window.location.href='../html/Home.html'">Quay lại Trang Chủ</button>
+          <button type="button" class="btn btn-xoals">Xóa Lịch Sử</button>
         </section>
       </div>
     </main>
@@ -252,9 +219,56 @@
       </div>
     </div>
 
+    <!-- modal product  -->
+    <!-- class fade thêm vào để modal xuất hiện mượt hơn -->
+    <div class="modal fade" id="product">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thức Ăn Cao Cấp Cho Pet</h5>
+            <button type="button" class="btn-close btn-pro" data-bs-dismiss="modal">X</button>
+          </div>
+          <div class="modal-body">
+            <div class="pro-top">
+              <div class="pro-left">
+                <img src="#" alt="anh" class="pro-img" />
+              </div>
+              <div class="pro-right">
+                <h5 class="loaisp"></h5>
+                <h5 class="tieude"></h5>
+                <h5 class="mota"></h5>
+                <h5 class="chitiet"></h5>
+                <ul class="thongtin">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span class="price"></span>
+              </div>
+            </div>
+            <div class="pro-bot">
+              <div class="count">
+                <button type="button" class="btn-tru">-</button>
+                <input type="number" name="sp" id="sp" class="space" value="1" min="1" />
+                <button type="button" class="btn-cong">+</button>
+              </div>
+              <div class="add">
+                <button type="button" class="btn btn-giohang"><i class="fa-solid fa-cart-shopping shopping-now"></i>Thêm vào giỏ hàng</button>
+                <button type="button" class="btn btn-muangay">Mua Ngay</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-close-pro" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- js -->
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/public.js"></script>
-    <script src="../js/Pay.js"></script>
+    <script src="../js/History.js"></script>
   </body>
 </html>

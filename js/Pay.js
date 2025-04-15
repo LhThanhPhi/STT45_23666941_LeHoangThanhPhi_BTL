@@ -98,3 +98,55 @@ function showCartOnPaymentPage() {
 
 // Gọi khi trang thanh toán được load
 document.addEventListener("DOMContentLoaded", showCartOnPaymentPage);
+
+// thanh toán
+document.querySelector(".btn-pay").addEventListener("click", function () {
+  let add = document.querySelector("#address");
+  let tel = document.querySelector("#tel-cus");
+  let addsp = document.querySelector(".check-add-pay");
+  let telsp = document.querySelector(".check-tel-pay");
+  let off = document.querySelector(".tt-of");
+  let onl = document.querySelector(".tt-onl");
+  let money = document.querySelector(".total-amount");
+  if (
+    add.value != "" &&
+    addsp.innerHTML === "Giá Trị Hợp Lệ" &&
+    tel.value != "" &&
+    telsp.innerHTML === "Giá Trị Hợp Lệ" &&
+    (off.checked || onl.checked) &&
+    money.innerHTML != "Tổng tiền: 0đ"
+  ) {
+    alert("Bạn đã Thanh Toán Thành Công");
+    // lưu vào localstorage để xem lịch sử
+    // lấy thông tin để lưu
+    let totalText = document.querySelector(".total-amount").innerText;
+    let tongTien = totalText.replace(/[^\d]/g, "") + "đ";
+    let phuongThuc = "";
+    if (off.checked) {
+      phuongThuc = "Khi Giao Hàng";
+    } else if (onl.checked) {
+      let method = document.getElementById("pay-online").value;
+      phuongThuc = "Online - " + method;
+    }
+    // Lấy đơn hàng cũ
+    let history = JSON.parse(localStorage.getItem("orders")) || [];
+    // Tạo đơn hàng mới
+    let pay = {
+      stt: history.length, //stt
+      ngayDat: new Date().toLocaleString("vi-VN"),
+      tongTien: tongTien,
+      phuongThuc: phuongThuc,
+    };
+    // Thêm đơn hàng và lưu lại
+    history.push(pay);
+    localStorage.setItem("orders", JSON.stringify(history));
+    //clear form
+    localStorage.removeItem("food");
+    setTimeout(() => {
+      location.reload();
+    }, 300);
+  } else {
+    alert("Thanh Toán Không Thành Công vui Lòng Thử Lại Sau");
+  }
+});
+// localStorage.removeItem("orders")

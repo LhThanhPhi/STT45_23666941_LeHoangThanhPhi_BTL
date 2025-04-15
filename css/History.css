@@ -1,0 +1,26 @@
+.hist .table {
+  margin-top: 50px;
+}
+.hist .hist-tt {
+  margin: 50px 0 0 0;
+  color: #0167ab;
+  margin-left: 15px;
+}
+.hist .btn-back,
+.btn-xoals {
+  width: 150px;
+  margin: 50px 5px 20px 0;
+  background-color: #112acb;
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+.hist .btn-xoals {
+  background-color: #faa200;
+}
+.hist .btn-xoals:hover {
+  background-color: #d21111;
+}
+.hist .btn-back:hover {
+  background-color: #0ba1ff;
+}

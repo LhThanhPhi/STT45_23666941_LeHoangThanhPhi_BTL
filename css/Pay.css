@@ -59,3 +59,14 @@
 .pay .btn-pay:hover {
   background-color: #ff8c00;
 }
+.pay .btn-hist {
+  margin-left: 10px;
+  width: 150px;
+  margin-top: 30px;
+  background-color: #0080ff;
+  color: #fff;
+  border-radius: 10px;
+}
+.pay .btn-hist:hover {
+  background-color: #119c05;
+}
