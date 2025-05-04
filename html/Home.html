@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website giới thiệu, bán thức ăn chó mèo trực tuyến</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
+    <link rel="manifest" href="../img/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="../img/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- boostrap 5 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/Home.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="container-fluid header-ctn">
+      <header class="head">
+        <div class="row head__top align-items-center justify-content-between">
+          <div class="col-5 d-flex justify-content-center align-items-center">
+            <img src="../img/logo1.png" alt="" class="logo1" width="50px" />
+            <span class="shop">PetGourmet</span>
+          </div>
+          <div class="col-7 d-flex justify-content-center align-items-center">
+            <form action="#">
+              <div class="input-group">
+                <input type="search" name="search" id="search" placeholder="nhập từ khóa tìm kiếm..." />
+                <button type="button" class="btn btn-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row head__bottom align-items-center">
+          <div class="col-5 d-flex justify-content-center align-items-center box-btn">
+            <button type="button" class="btn btn-si" data-bs-toggle="modal" data-bs-target="#si">Đăng Nhập</button>
+            <button type="button" class="btn btn-su" data-bs-toggle="modal" data-bs-target="#su">Đăng Ký</button>
+            <span class="after-si"></span>
+            <button type="button" class="btn btn-so">Đăng Xuất</button>
+          </div>
+          <div class="col-7 d-flex justify-content-center align-items-center">
+            <nav>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="../html/Home.html" class="nav-link font-nav">Trang Chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/About.html" class="nav-link font-nav">Giới Thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/Store.html" class="nav-link font-nav">Cửa Hàng</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/Shopping.html" class="nav-link font-nav">Giỏ Hàng</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../html/Pay.html" class="nav-link font-nav">Thanh Toán</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- main -->
+    <main class="main">
+      <!-- ảnh -->
+      <div class="container-fluid">
+        <section class="row sec-img">
+          <div class="col-8 father-si">
+            <img src="../img/food2.png" alt="food" class="i img-card-hvmg-food1" />
+            <div class="shop-intro">
+              <h2>Chào mừng đến với PetGourmet</h2>
+              <p>Chúng tôi chuyên cung cấp những món ăn ngon nhất</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <img src="../img/food1.png" alt="food" class="i img-card-hvmg-food2" />
+          </div>
+        </section>
+      </div>
+      <!-- chó mèo -->
+      <div class="container">
+        <section class="row sec-choose">
+          <h2 class="col-12 text-center desc-title">Sản Phẩm Theo Thú Cưng</h2>
+          <div class="col-6 text-center dog">
+            <a href="../html/Store_dog.html"><img src="../img/dog.png" alt="Sản phẩm cho chó" class="img-dog" /></a>
+            <br /><span class="desc-title desc-choose">Chó Cưng</span>
+          </div>
+          <div class="col-6 text-center cat">
+            <a href="../html/Store_cat.html"><img src="../img/cat.png" alt="Sản phẩm cho mèo" class="img-cat" /></a>
+            <br /><span class="desc-title desc-choose">Mèo Cưng</span>
+          </div>
+        </section>
+      </div>
+      <!-- món hot -->
+      <div class="container-fluid bg-item">
+        <section class="row sec-item">
+          <div class="col-12 text-center">
+            <h2 class="desc-sp">Sản phẩm nổi bật</h2>
+          </div>
+          <!-- item1 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fcat1.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Mèo Maximum Túi 5kg"
+              data-desc="Thức Ăn Túi Cao Cấp Cho Mèo Maximum"
+              data-type="thức ăn cho mèo"
+              data-price="500.000 đ"
+              data-protein="30%"
+              data-fat="18%"
+              data-calcium="0.65%-1.5%"
+              data-omega="5%"
+            >
+              <img src="../img/fcat1.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Mèo Maximum Túi 5kg</p>
+                <p class="card-text money">500.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item2 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fcat2.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat Túi 5kg"
+              data-desc="Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat"
+              data-type="thức ăn cho mèo"
+              data-price="1.000.000 đ"
+              data-protein="28%"
+              data-fat="17%"
+              data-calcium="0.7%-1.4%"
+              data-omega="6%"
+            >
+              <img src="../img/fcat2.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat Túi 5kg</p>
+                <p class="card-text money">1.000.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item3 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fcat3.jpg"
+              data-title="Thức Ăn Túi Cao Cấp Dạng Viên Cho Mèo Minimax Túi 5kg"
+              data-desc="Thức Ăn Túi Cao Cấp Dạng Viên Cho Mèo Minimax"
+              data-type="thức ăn cho mèo"
+              data-price="1.000.000 đ"
+              data-protein="29%"
+              data-fat="16%"
+              data-calcium="0.55%-1.3%"
+              data-omega="5%"
+            >
+              <img src="../img/fcat3.jpg" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Dạng Viên Cho Mèo Minimax Túi 5kg</p>
+                <p class="card-text money">1.000.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item4 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fcat4.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat Túi 400g"
+              data-desc="Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat"
+              data-type="thức ăn cho mèo"
+              data-price="60.000 đ"
+              data-protein="27%"
+              data-fat="15%"
+              data-calcium="0.6%-1.2%"
+              data-omega="4%"
+            >
+              <img src="../img/fcat4.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Mèo Pro-Cat Túi 400g</p>
+                <p class="card-text money">60.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item5 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fdog1.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Chó Grand Magic Túi 5kg"
+              data-desc="Bổ sung vitamin và khoáng chất cho chó lớn"
+              data-type="thức ăn cho chó"
+              data-price="250.000 đ"
+              data-protein="30.0%"
+              data-fat="15.0%"
+              data-calcium="1.2% - 4.5%"
+              data-omega="4.2%"
+            >
+              <img src="../img/fdog1.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Chó Grand Magic Túi 5kg</p>
+                <p class="card-text money">250.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item6 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fdog1.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Chó Grand Magic Túi 1kg"
+              data-desc="Dành cho chó nhỏ, dễ tiêu hóa"
+              data-type="thức ăn cho chó"
+              data-price="50.000 đ"
+              data-protein="28.0%"
+              data-fat="12.0%"
+              data-calcium="0.9% - 3.2%"
+              data-omega="2.5%"
+            >
+              <img src="../img/fdog1.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Chó Grand Magic Túi 1kg</p>
+                <p class="card-text money">50.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item7 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fdog2.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Chó Maximum Túi 5kg"
+              data-desc="Thức ăn cao cấp cho chó vận động nhiều"
+              data-type="thức ăn cho chó"
+              data-price="800.000 đ"
+              data-protein="32.5%"
+              data-fat="16.0%"
+              data-calcium="1.3% - 4.0%"
+              data-omega="4.5%"
+            >
+              <img src="../img/fdog2.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Chó Maximum Túi 5kg</p>
+                <p class="card-text money">800.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item8 -->
+          <div class="col-3">
+            <div
+              class="card"
+              data-bs-toggle="modal"
+              data-bs-target="#product"
+              data-img="../img/fdog2.png"
+              data-title="Thức Ăn Túi Cao Cấp Cho Chó Maximum Túi 1kg"
+              data-desc="Thức ăn tiện lợi cho chó nhỏ"
+              data-type="thức ăn cho chó"
+              data-price="160.000 đ"
+              data-protein="29.0%"
+              data-fat="13.0%"
+              data-calcium="0.8% - 3.3%"
+              data-omega="3.0%"
+            >
+              <img src="../img/fdog2.png" class="card-img-top img-card-hv" alt="food" />
+              <div class="card-body">
+                <p class="card-text desc-food">Thức Ăn Túi Cao Cấp Cho Chó Maximum Túi 1kg</p>
+                <p class="card-text money">160.000 đ</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="button" class="btn btn-xem" onclick="window.location.href='../html/Store.html'">Xem Thêm</button>
+          </div>
+        </section>
+      </div>
+      <!-- lý do nên chọn  -->
+      <div class="container">
+        <section class="row sec-why-choose">
+          <div class="col-12 text-center my-5">
+            <h2 class="h2-wc">Tại Sao Chọn PetGourmet</h2>
+          </div>
+          <!-- item1 -->
+          <div class="col-4">
+            <div class="card card1">
+              <img src="../img/text.png" class="card-img-top img-why-choose" alt="text" />
+              <div class="card-body">
+                <h5 class="card-title desc-wc">Cam Kết Chất Lượng</h5>
+                <p class="card-text desc-wc">Chúng tôi cam kết cung cấp sản phẩm chất lượng cao, đảm bảo sự hài lòng cho khách hàng.</p>
+              </div>
+            </div>
+          </div>
+          <!-- item2 -->
+          <div class="col-4">
+            <div class="card card1">
+              <img src="../img/shipper.png" class="card-img-top img-why-choose" alt="ship" />
+              <div class="card-body">
+                <h5 class="card-title desc-wc">Ship Hàng Nhanh Chóng</h5>
+                <p class="card-text desc-wc">Dịch vụ giao hàng nhanh chóng, giúp bạn nhận được sản phẩm trong thời gian sớm nhất.</p>
+              </div>
+            </div>
+          </div>
+          <!-- item3 -->
+          <div class="col-4">
+            <div class="card card1">
+              <img src="../img/box.png" class="card-img-top img-why-choose" alt="box" />
+              <div class="card-body">
+                <h5 class="card-title desc-wc">Miễn Phí Vận Chuyển</h5>
+                <p class="card-text desc-wc">Miễn phí vận chuyển cho tất cả các đơn hàng, giúp bạn tiết kiệm chi phí tối đa.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <div class="container-fluid bg-footer">
+      <footer class="footer">
+        <div class="row">
+          <div class="col-7">
+            <h5>Shop PetGourmet</h5>
+            <p>
+              PetGourmet là cửa hàng chuyên cung cấp thực phẩm cao cấp cho thú cưng, từ thức ăn dinh dưỡng đến các món ăn vặt hấp dẫn. Chúng tôi cam
+              kết mang đến sản phẩm chất lượng, an toàn và phù hợp với mọi nhu cầu của thú cưng.
+            </p>
+
+            <p>
+              Bên cạnh đó, PetGourmet luôn cập nhật những xu hướng mới nhất trong dinh dưỡng thú cưng, đảm bảo mỗi bữa ăn không chỉ ngon miệng mà còn
+              đầy đủ dưỡng chất. Hãy ghé thăm PetGourmet để mang đến cho bé cưng của bạn sự chăm sóc tốt nhất!
+            </p>
+          </div>
+          <div class="col-3">
+            <h5>Liên Hệ</h5>
+            <ul>
+              <li>
+                <span><i class="fa-solid fa-location-dot" style="color: #30c606"></i></span>
+                <span>Địa chỉ: 1 Lê Lai, Quận 1, TP HCM</span>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-phone" style="color: #74c0fc"></i></span>
+                <span>0987654321</span>
+              </li>
+              <li>
+                <span> <i class="fa-solid fa-envelope" style="color: #1900ff"></i></span>
+                <span>cskhPetGourmet@gmail.com</span>
+              </li>
+              <li>
+                <span> <i class="fa-solid fa-globe" style="color: #075ef2"></i></span>
+                <span>http://xxxxxxxx</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <h5>Tương tác với Shop</h5>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <span>Facebook</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram" style="color: #e64747"></i></a>
+                <span>Instagram</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-tiktok" style="color: #000000"></i></a>
+                <span>Tiktok</span>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube" style="color: #ff0000"></i></a>
+                <span>Youtube</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- modal su -->
+    <div class="modal fade" tabindex="-1" id="su">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Đăng Ký</h5>
+            <button type="button" class="btn-close sign-x" data-bs-dismiss="modal">X</button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <!-- f1 -->
+              <div class="form form1">
+                <label for="ten">Tên :</label>
+                <input type="text" name="ten" id="ten" class="form-control ten-su" placeholder="Nhập Tên Của Bạn" />
+                <span class="sp-ten-su"></span>
+              </div>
+              <!-- f2 -->
+              <div class="form form2">
+                <label for="ho">Họ :</label>
+                <input type="text" name="ho" id="ho" class="form-control ho-su" placeholder="Nhập Họ Của Bạn" />
+                <span class="sp-ho-su"></span>
+              </div>
+              <!-- f3 -->
+              <div class="form form3">
+                <label for="e1">Email :</label>
+                <input type="email" name="e1" id="e1" class="form-control email-su" placeholder="Nhập email Của Bạn" />
+                <span class="sp-email-su"></span>
+              </div>
+              <!-- f4 -->
+              <div class="form form4">
+                <label for="p1">password</label>
+                <input type="password" name="p1" id="p1" class="form-control pass-su" placeholder="Nhập pasword Của Bạn" />
+                <span class="sp-pass-su"></span>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-f btn-f-close" data-bs-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-f btn-f-sign">Đăng Ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal si -->
+    <div class="modal fade" tabindex="-1" id="si">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Đăng Nhập</h5>
+            <button type="button" class="btn-close sign-x" data-bs-dismiss="modal">X</button>
+          </div>
+          <div class="modal-body">
+            <!-- f5 -->
+            <div class="form form5">
+              <label for="e2">Email :</label>
+              <input type="email" name="e2" id="e2" class="form-control email-si" placeholder="Nhập email Của Bạn" />
+              <span class="sp-email-si"></span>
+            </div>
+            <!-- f6 -->
+            <div class="form form6">
+              <label for="p2">password</label>
+              <input type="password" name="p2" id="p2" class="form-control pass-si" placeholder="Nhập pasword Của Bạn" />
+              <span class="sp-pass-si"></span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-f btn-f-close" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-f btn-f-sign">Đăng Nhập</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal product  -->
+    <!-- class fade thêm vào để modal xuất hiện mượt hơn -->
+    <div class="modal fade" id="product">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thức Ăn Cao Cấp Cho Pet</h5>
+            <button type="button" class="btn-close btn-pro" data-bs-dismiss="modal">X</button>
+          </div>
+          <div class="modal-body">
+            <div class="pro-top">
+              <div class="pro-left">
+                <img src="#" alt="anh" class="pro-img" />
+              </div>
+              <div class="pro-right">
+                <h5 class="loaisp"></h5>
+                <h5 class="tieude"></h5>
+                <h5 class="mota"></h5>
+                <h5 class="chitiet"></h5>
+                <ul class="thongtin">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <span class="price"></span>
+              </div>
+            </div>
+            <div class="pro-bot">
+              <div class="count">
+                <button type="button" class="btn-tru">-</button>
+                <input type="number" name="sp" id="sp" class="space" value="1" min="1" />
+                <button type="button" class="btn-cong">+</button>
+              </div>
+              <div class="add">
+                <button type="button" class="btn btn-giohang"><i class="fa-solid fa-cart-shopping shopping-now"></i>Thêm vào giỏ hàng</button>
+                <button type="button" class="btn btn-muangay">Mua Ngay</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-close-pro" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/Home.js"></script>
+  </body>
+</html>
